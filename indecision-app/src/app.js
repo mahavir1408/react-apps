@@ -1,4 +1,12 @@
-import './utils';
-console.log('App.js is running!');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import IndecisionApp from './components/IndecisionApp';
 
-console.log('Square', square);
+// Render elements
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+
+class OldSyntax {
+  constructor () {
+    this.name = "Old Name";
+  }
+}
