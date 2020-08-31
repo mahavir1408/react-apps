@@ -4,10 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "serve": "nohup live-server public/ &",
+    "start:live-server": "nohup live-server public/ &",
     "babel": "babel src/app.js --out-file=public/bundle.js --presets=@babel/env,@babel/react --watch",
-    "build-babel": "npm run serve && npm run babel",
-    "build-webpack": "webpack"
+    "build:babel": "npm run start:live-server && npm run babel",
+    "build:webpack": "webpack --watch",
+    "serve": "webpack-dev-server --open && npm run build:webpack"
   },
   "dependencies": {
     "live-server": "^1.2.0"
@@ -23,8 +24,8 @@
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
-    "live-server": "^1.2.0",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
