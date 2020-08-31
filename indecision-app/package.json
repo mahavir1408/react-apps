@@ -1,0 +1,30 @@
+{
+  "name": "indecision-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "serve": "nohup live-server public/ &",
+    "babel": "babel src/app.js --out-file=public/scripts/app.js --presets=@babel/env,@babel/react --watch",
+    "build-babel": "npm run serve && npm run babel",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"https://github.com/mahavir1408/react-app\""
+  },
+  "author": "Mahavir Munot",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "live-server": "^1.2.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
