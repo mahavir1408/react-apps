@@ -12,5 +12,13 @@ module.exports = {
     compress: true,
     port: 8082,
     clientLogLevel: 'silent'
-  }
+  },
+  module: {
+    rules: [{
+      loader: 'babel-loader',
+      test: /\.js$/,
+      exclude: /node_modules/
+    }]
+  },
+  devtool: 'eval-cheap-module-source-map'
 };
