@@ -11,11 +11,20 @@ class Counter extends Component {
     return count === 0 ? "Zero" : count;
   }
 
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
   render() {
     return (
       <React.Fragment>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button className="button btn-secondary btn-sm">Increment</button>
+        <button
+          className="button btn-secondary btn-sm"
+          onClick={this.handleIncrement}
+        >
+          Increment
+        </button>
         <ul>
           {this.state.tags.map((tag) => (
             <li key={tag}>{tag}</li>
