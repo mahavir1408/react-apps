@@ -10,7 +10,6 @@ const ListGroup = ({
   return (
     <ul className="list-group">
       {items.map((item) => {
-        console.log(item[valueProperty]);
         return (
           <li
             onClick={() => onItemSelect(item)}
