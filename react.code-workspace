@@ -1,10 +1,13 @@
 {
   "folders": [
-	{
-		"path": "."
-	}
-],
-	"settings": {
-		"git.ignoreLimitWarning": true
-	}
+    {
+      "path": "."
+    },
+    {
+      "path": "../nodejs"
+    }
+  ],
+  "settings": {
+    "git.ignoreLimitWarning": true
+  }
 }
